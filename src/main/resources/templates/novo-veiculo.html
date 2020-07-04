@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliacao Tinnova</title>
+    <script th:src="@{/jquery.js}" type="text/javascript"></script>
+    <script th:src="@{/cadastro-veiculo.js}" type="text/javascript"></script>
+</head>
+<body>
+    
+    <h2>Novo Veiculo</h2>
+
+    <form id="formNovoVeiculo">
+
+        <span>Veiculo</span><input type="text" name="veiculo">
+        <span>Marca</span><input type="text" name="marca">
+        <span>Ano</span><input type="number" name="ano" value="2020">
+        <span>Descricao</span><input type="text" name="descricao">
+        <span>Vendido</span><input type="checkbox" name="vendido">
+        <p></p>
+        <button type="button" onclick="javascript:save(this)">Enviar</button>
+
+    </form>
+    
+</body>
+</html>
