@@ -35,17 +35,17 @@ public class VeiculosController {
     }
 
     @GetMapping(value="/find")
-    public ResponseEntity<List<Veiculo>> findByTermo(@RequestParam(name = "termo" , required= true) String termo){ 
+    public ResponseEntity<List<Veiculo>> findByTermo(@RequestParam(name = "termo" , required= true) final String termo){ 
         return ResponseEntity.ok(veiculoService.findByVeiculo(termo));        
     }
 
     @GetMapping(value="/{id}")
-    public ResponseEntity<Veiculo> findById(@PathVariable Integer id){
+    public ResponseEntity<Veiculo> findById(@PathVariable final Integer id){
         return ResponseEntity.ok(veiculoService.findById(id));
     }
 
     @PostMapping(value="")
-    public ResponseEntity<?> create(@RequestBody Veiculo veiculo) {
+    public ResponseEntity<?> create(@RequestBody final Veiculo veiculo) {
         try {
             return ResponseEntity.ok(veiculoService.create(veiculo));    
         } catch (Exception e) {
@@ -54,7 +54,7 @@ public class VeiculosController {
     }
 
     @PutMapping(value="/{id}")
-    public ResponseEntity<?> update(@PathVariable int id, @RequestBody Veiculo veiculo) {
+    public ResponseEntity<?> update(@PathVariable final int id, @RequestBody final Veiculo veiculo) {
         try {
             return ResponseEntity.ok(veiculoService.update(id, veiculo));    
         } catch (Exception e) {
@@ -63,7 +63,7 @@ public class VeiculosController {
     }
 
     @PatchMapping(value = "/{id}")
-    public ResponseEntity<?> updateFieldVendido(@PathVariable int id, @RequestBody Veiculo veiculo) {
+    public ResponseEntity<?> updateFieldVendido(@PathVariable final int id, @RequestBody final Veiculo veiculo) {
 
         try {
             return ResponseEntity.ok(veiculoService.updateVendido(id, veiculo));    
@@ -74,7 +74,7 @@ public class VeiculosController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<String> delete(@PathVariable int id) {
+    public ResponseEntity<String> delete(@PathVariable final int id) {
         try {
             veiculoService.deleteById(id);
             return ResponseEntity.ok().build();

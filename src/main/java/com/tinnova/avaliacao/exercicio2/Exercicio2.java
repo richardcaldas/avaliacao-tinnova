@@ -16,7 +16,7 @@ public class Exercicio2 {
 
     }
 
-    public static int[] orderbyBubbleSort(int[] array) {
+    public static int[] orderbyBubbleSort(final int[] array) {
 		
 		final int size = array.length;
 		
