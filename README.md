@@ -10,13 +10,19 @@ Realizei a implementação de uma API utilizando Spring Boot com banco de dados 
 
 Pacotes: 
     - Controller: Api Restful com todos os métodos HTTP implementados.
+
     - Model: as classes de objetos do exercicio;
+
     - Service: regras de negócio;
+
     - repositoy: persitencia dos dados no banco de dados (postgres)
+
 
 
 Foi desenvolvido duas páginas html para consumir os dados da API.
     - index.html
+
     - novo-veiculo.html
+    
 
 Todos os testes da API foram realizados utilizando o **Postman**.
