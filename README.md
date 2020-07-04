@@ -9,6 +9,7 @@ Os exericios estáo separados por pasta:
 Realizei a implementação de uma API utilizando Spring Boot com banco de dados Postgres.
 
 Pacotes: 
+
     - Controller: Api Restful com todos os métodos HTTP implementados.
 
     - Model: as classes de objetos do exercicio;
@@ -20,9 +21,10 @@ Pacotes:
 
 
 Foi desenvolvido duas páginas html para consumir os dados da API.
+
     - index.html
 
     - novo-veiculo.html
-    
+
 
 Todos os testes da API foram realizados utilizando o **Postman**.
