@@ -52,8 +52,13 @@ public class Veiculo {
     }
 
     public int getSemanaDoAno(){
-        final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyww", new Locale("en","US"));
-        return Integer.valueOf(dateFormat.format(this.getCreated()));
+        if (this.getCreated() != null){
+            final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyww", new Locale("en","US"));
+            return Integer.valueOf(dateFormat.format(this.getCreated()));    
+        }else{
+            return 0;
+        }
+        
     }
 
     

@@ -58,7 +58,7 @@ public class VeiculosController {
         try {
             return ResponseEntity.ok(veiculoService.update(id, veiculo));    
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
+            return ResponseEntity.notFound().build();
         }
     }
 
@@ -79,7 +79,7 @@ public class VeiculosController {
             veiculoService.deleteById(id);
             return ResponseEntity.ok().build();
         } catch (Exception ex) {
-            return ResponseEntity.badRequest().body("Veiculo nao encontrado");
+            return ResponseEntity.notFound().build();
         }
     }
 
