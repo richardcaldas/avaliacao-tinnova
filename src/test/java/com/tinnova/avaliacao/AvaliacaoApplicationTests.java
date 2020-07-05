@@ -101,7 +101,7 @@ class AvaliacaoApplicationTests {
 	void caseDeleteVeiculo() throws Exception {
 
 		mockMvc.perform(MockMvcRequestBuilders
-				.delete("/veiculos/{id}",16))
+				.delete("/veiculos/{id}",17))
 				.andExpect(MockMvcResultMatchers.status().isOk());			
 	}
 
@@ -111,6 +111,46 @@ class AvaliacaoApplicationTests {
 		mockMvc.perform(MockMvcRequestBuilders
 				.delete("/veiculos/{id}",1))
 				.andExpect(MockMvcResultMatchers.status().isNotFound());			
+	}
+
+	@Test
+	void caseGetQuantidadeNaoVendisos() throws Exception {
+
+		mockMvc.perform(MockMvcRequestBuilders
+				.get("/veiculos/quantidade-nao-vendidos")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(MockMvcResultMatchers.status().isOk());
+			
+	}
+
+	@Test
+	void caseGetVeiculosPorDecadaFabricacao() throws Exception {
+
+		mockMvc.perform(MockMvcRequestBuilders
+				.get("/veiculos/veiculos-por-decada-fabricacao")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(MockMvcResultMatchers.status().isOk());
+			
+	}
+
+	@Test
+	void caseGetVeiculosPorFabricante() throws Exception {
+
+		mockMvc.perform(MockMvcRequestBuilders
+				.get("/veiculos/veiculos-por-fabricante")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(MockMvcResultMatchers.status().isOk());
+			
+	}
+
+	@Test
+	void caseGetVeiculosRegistradosUltimaSemana() throws Exception {
+
+		mockMvc.perform(MockMvcRequestBuilders
+				.get("/veiculos/registrados-ultima-semana")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(MockMvcResultMatchers.status().isOk());
+			
 	}
 
 }
